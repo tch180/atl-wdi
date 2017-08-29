@@ -52,12 +52,17 @@ to answer these questions.
 10. What two holidays will we have during this course (not counting the long winter break)?
 1. we only have labor day off during this cohort. 
 
+<<<<<<< HEAD
 comfortScore: 4
 
 ## Submitting Your Work
 
 When you're ready, post your Github link for this assignment to Schoology with:
 
+=======
+When you're ready, post your Github link for this assignment to Schoology with:
+
+>>>>>>> 8e7ce9faf39071676c55a8938b9c224fd8321aef
 - A link to the file containing your homework answers
 - A 'comfort' score on how you feel about your answers, 
 from 1 (very uncomfortable) to 5 (very comfortable)
