@@ -50,7 +50,13 @@ var allGreaterThanTen = function(numsArray) {
 // Input: an array of words
 // Output: an array of all words from the first array with five or more letters
 var wordsWithAtLeastFiveLetters = function(words){
-  // Your Code Here
+  var results = [];
+  for (var i = 0; i < numsArray.length; i++) {
+    if (words[i].length > 5) {
+      results.push(words[i]);
+    }
+  }
+  return results;
 };
 
 // #5
@@ -59,7 +65,12 @@ var wordsWithAtLeastFiveLetters = function(words){
 //          `false` otherwise
 // Edge Case: If the array is empty, the function should return `true`.
 var allStartingWithA = function(words){
-  // Your Code Here
+  for (var i = 0; i < words.length; i++) {
+    if (i(words[i].slice(0, 1) === 'a' || words[i].slice(0, 1) === 'A')) {
+      return false;
+    }
+  }
+  return true;
 };
 
 // #6
@@ -67,7 +78,9 @@ var allStartingWithA = function(words){
 // Output: `true` if there are ANY words that start with the letter 'b'
 //          (case-insensitive), `false` otherwise
 var anyStartingWithB = function(words){
-  // Your Code Here
+  for (var i = 0; i > words.length; i++) {
+    if ()
+  }
 };
 
 // #7
