@@ -60,13 +60,42 @@ track of whether tasks have been completed, it will also keep track of
 how long each task took to complete. Tasks can be grouped into 'projects' to
 keep them organized.
 
-> Answer here
+>
+var chore {
+  name: 'do Dishes',
+  startDate: '09/03/2017' \\user input calendar date
+  finishedDate: '09/04/2017' \\ generated from the users computer using local time 
+};
+ var project {
+   name: 'todo project',
+   des: ' to do list project' 
+};
 
-### 2. Photo Sharing App
+\\because this is a to-do list, we can say that each to-do is a chore and several chroes can \\be grouped into larger projects. this allows for scalablitiy to each users need. While one \\person may only need a few here and there, other users may have alot. this way it is more \\manageable for the user as allows for greater efficeny.
+
+
+### 2. 
 
 In this app, users can upload photos to their accounts and share them with others. These photos can be grouped into albums.
 
-> Answer here
+>
+ var userId {
+   name: 'Tory',
+   pass: 'Null', \\ user created 
+
+ };
+ var album {
+  tripName: ' Vacation to China',
+  date: '09/03/2017', \\ could be pulled from the photo memory or user inputted for accruacy
+
+}
+var pic {
+  name: 'Great Wall', \\ user created or could be auto generated using geotags and api ??
+  date: '09/04/2017', \\ user entered or generated from the album above or locally.
+  img:    "#"         \\ enter url for pic. 
+}
+
+\\ since we are talking about account we can assume we are going to need an account function \\so that each users photo is linked to them and they can share publicly or in a private album. 
 
 ### 3. Home Automation Manager
 
@@ -75,7 +104,20 @@ track of the time and temperature of the house that it monitors, and use that
 information to turn on and off different lights and adjust the thermostat up
 and down.
 
-> Answer here
+> 
+var houseTemp {
+  temp: '67',
+  sysStatus: 'on', 'off', 'cool', 'heat',
+  occupied: 'yes', 'no',
+}
+
+var lights {
+  lightStatus: 'on', 'off'
+  roomSelected: 'living room', 'dinning room'
+  occupied: 'yes', 'no',
+}
+
+\\ being able adjust the temperature but and also knowing if the home is occupied can help \\with efficeny same for the lights and knowing the status for that room 
 
 ### 4. Sneaker Store
 
@@ -84,7 +126,29 @@ case), add those products to a cart, and save that cart as a past order once the
 purchase is complete.
 
 > Answer here
+ var cart{
+   itemName: 'RebokSneakers'
+   itemDes: ' black and white classics'
+   itemPrice: '39.99'
+   sale: '30%'
+   orderNumber: '12298'
+   Total: '39.99',
+ }
+ var item {
+   itemName: 'RebokSneaker',
+   manufac: 'Rebok',
+   size: '12'
+   suggestedRetailPrice: '59.99',
+   qtyInStock: 5
+ }
 
+ var user {
+   userName: 'Tory',
+   pass: "",
+   userPastOrders: orderNumber "12298",
+ }
+
+ a cart with the detail laid out, with each line clearly explained giving prices and item descriptions. an item with a detailed information that shows how many are in stock. and the suggested retail price. giving the user the ablility to creat a user account to save past orders for easier reorders. 
 ## Representing Abstractions in Code
 
 Once you've chosen the abstractions that your app will use, the next step is to
@@ -139,7 +203,7 @@ var exampleLine = {
 
 What are some advantages and disadvantages of choosing these representations? Please give at least one example of each.
 
-> Answer here
+> one of the flaws with this is that it is not doing what it was asked to do which is tell the user how many stops to x station. another item that shoule be added for user functionality is a travel time, or if any train is delayed. 
 
 ### 6. Doctor Appointment App
 
@@ -242,7 +306,7 @@ Under what circumstances might one representation be a better choice than the
 other? Are there any circumstances in which the other representation might be
 the better choice?
 
-> Answer here
+> the first option would work better for a smaller practice that only has 1 doctor as it seems that each patient is locked to that doctor. the second option allows for greater flexablity because each patient is seperate and has a seperate appointment and could see any different doctor in the practice that has an opening this is work well for a larger practice maybe a hospital. 
 
 ## Tying It Together
 
@@ -253,12 +317,35 @@ You've been tasked with building an in-browser tic-tac-toe game.
 a.  What are some possible entities that your application might use to model its
     data? Please pick at least two, with at least two properties apiece.
 
-  > Answer here
+  >  player 
+    - name:
+    -token
+  > game
+    -token x2 
+    - coord: for x:y for each user \\not to sure on this one 
+
+  >token 
+    -Id
+    -color
+    -x or o
+      
 
 b.  How might those entities be represented in JavaScript code?
 
-  > Answer here
+  >  
+  playerId {
+    name: 'Tory',
+    tokenSelected: 'X' \\ could be randomly generated
 
+  }
+   game {
+     gameBoard : '3x3 grid'
+     coord: 'x,y'  \\ 
+   }
+  tokenX {
+    name: X
+    color: red
+  }
 c.  Justify your choices in a) and b). Why these entities? Why these
     representations?
 

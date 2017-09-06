@@ -20,18 +20,28 @@ Topics: datatypes, conditionals, loops, functions <br>
 ## 1
 
 Write a for loop that will console.log the numbers 0 to 999.
+ for (let i = 0; i < 1000; i++) {
+     console.log(i)
+ }
 
 ## 2
-
 Write a *for* loop that iterates in *reverse*. Console.log a countdown from 999 to 0.
 
+for (let i = 1000; i >= 0; i--){
+    console.log(i);
+}
 ## 3
-
 ```
 var directors = ["Michelangelo Antonioni", "David Lynch", "Yasujiro Ozu", "Ingmar Bergman", "Federico Fellini", "Martin Scorcese", "Michael Bay"]
 ```
 
 Write a for loop that iterates over the directors array and console.logs each director.
+for
+  
+  
+directors.forEach(function(name) {
+      console.log(name)
+  })
 
 ## 4
 
@@ -41,11 +51,11 @@ Write another for loop that iterates over the directors array but also adds the 
 => "Hi, Michelangelo Antonioni"
 => "Hi, David Lynch"
 ```
+directors.forEach(function(name) {
+    console.log("hi, " + name)
+})
 
 ## 5
-
-etc.
-
 Write a function `isCool` that accepts one parameter, `name` as an argument. The function should return a string that outputs the name and a message saying that the person is super cool.
 
 ```
@@ -53,6 +63,10 @@ console.log(isCool("Thom"));
 
 => "Thom is super cool";
 ```
+let somethingElse = ["Tory", "Grant", "Brandon"];
+somethingElse.forEach(function(myName) {
+    console.log(myName + ' is Super Cool');
+});
 
 ## 6
 
