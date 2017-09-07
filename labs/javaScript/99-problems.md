@@ -72,6 +72,8 @@ somethingElse.forEach(function(myName) {
 
 Write a function `twoLengths` that accepts two parameters (strings). The function should return an _array_ of numbers where each number is the length of the corresponding string.
 
+twoLengths("Tory", "Redner");
+n
 ```javascript
 // example usage
 twoLengths("Hank", "Hippopopalous");
