@@ -91,4 +91,4 @@ window.onload = function(){
 };
 
 
-// not completely my own, 
+// not completely my own. comfort score of 2 maybe relied heavily on solution and classwork. 
