@@ -10,7 +10,7 @@ body {
 
 .component {
   padding: 30px;
-  background-color: pink;
+  background-color: #0C0304;
   margin: 10px;
 }
 
@@ -23,7 +23,10 @@ main {
   border: black solid 1px;
   margin: 1px;
   text-align: center;
-  background-color: violet;
+  background-color: #FF0505;
   width: 150px;
   float: left;
+}
+h1,h2,h3 {
+color:white
 }

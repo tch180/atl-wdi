@@ -49,31 +49,46 @@ const CounterCollection = {
 const Presenter = {
   insertCounterComponent: function(newCountId){
     console.log(`insert counter component #${newCountId}`);
-    // Your Code Here
+    const createCounterComponent = document.createElement('div'); // creates Var for div 
+    createCounterComponent.innerHTML = //attaches to var above to create div
+    `<h3>Count: <span>0</span></h3> <button class='increment'> +1 </button> <button class='delete'> Delete </button>`; // creates h3 tag with a button of +1 and a secondary button of delete 
+    createCounterComponent.className += ' counter';//creates the class of div and assigns it the name of counter
+    createCounterComponent.dataset.countId = newCountId;// no
+    createCounterComponent.getElementsByClassName('increment')[0].onclick = AppController.onClickIncrement;// created event to happen on click
+    createCounterComponent.getElementsByClassName('delete')[0].onclick = AppController.onClickDelete;
+    document.getElementById('counter-list').appendChild(createCounterComponent);
   },
   refreshCounterComponent: function(countId){
     console.log(`refresh counter component #${countId}`);
-    // Your Code Here
+    const val = CounterCollection.getCounterValue(countId);
+    document.querySelector(`[data-count-id="${countId}"] span`).innerHTML = val;
   },
   removeCounterComponent: function(countId){             // REACH
-    console.log(`remove counter component #${countId}`);
-    // Your Code Here
+   
   }
 };
 
 // Top-Level Application Control //
 const AppController = {
   onClickNewCounter: function(event){
-    // Your Code Here
+    CounterCollection.createCounter();
+    Presenter.insertCounterComponent(CounterCollection.lastCountId);
+    console.log(`click new counter (#${CounterCollection.lastCountId})`);
   },
   onClickIncrement: function(event){
-    // Your Code Here
+    let countId = Number(event.target.parentNode.dataset.countId);
+    console.log(`click increment #${countId}`);
+    CounterCollection.incrementCounter(countId);
+    Presenter.refreshCounterComponent(countId);
   },
   onClickDelete: function(event){                           // REACH
-    // Your Code Here
+
   }
 };
 
 window.onload = function(){
   document.getElementById('new-counter').onclick = AppController.onClickNewCounter;
 };
+
+
+// not completely my own, 
