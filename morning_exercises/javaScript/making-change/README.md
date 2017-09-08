@@ -4,7 +4,8 @@
 
 Write a function that can make correct change, given a purchase price and an
 amount paid.
-
+ 
+ 
 ## Setup
 
 Make sure that you are on the `master` branch of your class repo.  Then run `git pull upstream master` to pull the latest materials from the instructors' repository. You shouldn't hit a merge conflict here, but if you do, flag down an instructor right away.
