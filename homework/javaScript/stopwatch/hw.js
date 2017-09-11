@@ -101,6 +101,9 @@ const Stopwatch = {
   
   window.onload = function(){
     document.getElementById('start').onclick = AppController.handleClickStart;
-    document.getElementById('lap').onclick = AppController.handleClickLap;
     document.getElementById('stop').onclick = AppController.handleClickStopReset;// Attach AppController methods to the DOM as event handlers here.
   };
+
+
+
+  // ccomfort score of 2.5 give or take. could not figure out how to add hours without it breaking, could not figure out reset or lap 
