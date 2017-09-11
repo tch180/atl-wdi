@@ -29,10 +29,7 @@ const Stopwatch = {
       }
     },
     reset: function(){
-      this.mins = 0;
-      this.secs = 0;
-      this.millisecs = 0;
-      this.laps =[];
+     
     },
     start: function(){
       if (!this.isRunning) {
@@ -44,28 +41,24 @@ const Stopwatch = {
       this.isRunning = false;
     },
     lap: function(){
-      if (this.isRunning) {
-          this.laps.push ({
-              mins: this.mins,
-              secs: this.secs,
-              millisecs: this.millisecs
-         });
+      
+         
       }
     }
-  };
+  
   
   /// User Interface ///
   const ViewEngine = {
     updateTimeDisplay: function(mins, secs, millisecs){
       document.getElementById('mins').innerHTML = ViewHelpers.zeroFill(mins ,2);
-      document.getElementById('secs').innerHTML = ViewHelpers.zeroFill(secs ,2);
-    document.getElementById('millisecs').innerHTML = ViewHelpers.zeroFill(millisecs/10, 2);
+       document.getElementById('secs').innerHTML = ViewHelpers.zeroFill(secs ,2);
+        document.getElementById('millisecs').innerHTML = ViewHelpers.zeroFill(millisecs/10, 2);
     },
     updateLapListDisplay: function(laps){
-      var laps = Stopwatch.laps;
+      let laps = Stopwatch.laps;
       let lapList = document.getElementById('lap-list');
       lapList.innerHTML = '';
-      for (var i = 0; i <laps.length; i++) {
+      for (let i = 0; i <laps.length; i++) {
           lapList.innerHTML += "\
           <li>" +
           ViewHelpers.zeroFill(laps[i].mins, 2) + ":" +
@@ -77,9 +70,9 @@ const Stopwatch = {
   };
   const ViewHelpers = {
     zeroFill: function(number, length){
-      var str = number.toString();
+      let str = number.toString();
       let numZeroes = Math.max(length - str.length, 0);
-      for( var i = 0; i < (length - str.length); i++){
+      for( let i = 0; i < (length - str.length); i++){
           str = '0' + str;
       }
       return str;
@@ -98,7 +91,7 @@ const Stopwatch = {
     handleClickStopReset: function(){
       if (Stopwatch.isRunning) {
           Stopwatch.stop();
-          
+       
       }
     },
     handleClickLap: function(){
