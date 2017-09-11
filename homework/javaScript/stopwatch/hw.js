@@ -4,67 +4,110 @@
 
 /// Data & Core Business Logic ///
 const Stopwatch = {
-  tickClock: function(){
-    if (Stopwatch.isRunning) {
-      setTimeout(Stopwatch.tickClock, 10); // trigger next clock tick
-      Stopwatch.advanceTenMillisecs();
-      AppController.handleClockTick();
+    tickClock: function(){
+      if (Stopwatch.isRunning) {
+        setTimeout(Stopwatch.tickClock, 10); // trigger next clock tick
+        Stopwatch.advanceTenMillisecs();
+        AppController.handleClockTick();
+      }
+    },
+    isRunning: false,
+    mins: 0,
+    secs: 0,
+    millisecs: 0,
+    laps: [],
+    // DO NOT EDIT ABOVE THIS LINE
+    advanceTenMillisecs: function(){
+      this.millisecs += 10;
+      if (this.millisecs >= 1000) {
+          this.millisecs -= 1000;
+          this.secs++;
+      }
+      if (this.secs >= 60) {
+          this.secs -= 60;
+          this.mins++;
+      }
+    },
+    reset: function(){
+      this.mins = 0;
+      this.secs = 0;
+      this.millisecs = 0;
+      this.laps =[];
+    },
+    start: function(){
+      if (!this.isRunning) {
+          this.isRunning = true;
+          this.tickClock();
+      }
+    },
+    stop: function(){
+      this.isRunning = false;
+    },
+    lap: function(){
+      if (this.isRunning) {
+          this.laps.push ({
+              mins: this.mins,
+              secs: this.secs,
+              millisecs: this.millisecs
+         });
+      }
     }
-  },
-  isRunning: false,
-  mins: 0,
-  secs: 0,
-  millisecs: 0,
-  laps: [],
-  // DO NOT EDIT ABOVE THIS LINE
-  advanceTenMillisecs: function(){
-    // Your Code Here
-  },
-  reset: function(){
-    // Your Code Here
-  },
-  start: function(){
-    // Your Code Here
-  },
-  stop: function(){
-    // Your Code Here
-  },
-  lap: function(){
-    // Your Code Here
-  }
-};
+  };
+  
+  /// User Interface ///
+  const ViewEngine = {
+    updateTimeDisplay: function(mins, secs, millisecs){
+      document.getElementById('mins').innerHTML = ViewHelpers.zeroFill(mins ,2);
+      document.getElementById('secs').innerHTML = ViewHelpers.zeroFill(secs ,2);
+    document.getElementById('millisecs').innerHTML = ViewHelpers.zeroFill(millisecs/10, 2);
+    },
+    updateLapListDisplay: function(laps){
+      var laps = Stopwatch.laps;
+      let lapList = document.getElementById('lap-list');
+      lapList.innerHTML = '';
+      for (var i = 0; i <laps.length; i++) {
+          lapList.innerHTML += "\
+          <li>" +
+          ViewHelpers.zeroFill(laps[i].mins, 2) + ":" +
+          ViewHelpers.zeroFill(laps[i].secs, 2) + ":" +
+          ViewHelpers.zeroFill(laps[i].millisecs/10, 2) +
+          "</li>";
+      }
+    },
+  };
+  const ViewHelpers = {
+    zeroFill: function(number, length){
+      var str = number.toString();
+      let numZeroes = Math.max(length - str.length, 0);
+      for( var i = 0; i < (length - str.length); i++){
+          str = '0' + str;
+      }
+      return str;
+    },
+  };
+  
+  /// Top-Level Application Code ///
+  const AppController = {
+    handleClockTick: function(){
+      ViewEngine.updateTimeDisplay(Stopwatch.mins, Stopwatch.secs, Stopwatch.millisecs);
 
-/// User Interface ///
-const ViewEngine = {
-  updateTimeDisplay: function(mins, secs, millisecs){
-    // Your Code Here
-  },
-  updateLapListDisplay: function(laps){
-    // Your Code Here
-  },
-};
-const ViewHelpers = {
-  zeroFill: function(number, length){
-    // Your Code Here
-  },
-};
-
-/// Top-Level Application Code ///
-const AppController = {
-  handleClockTick: function(){
-    // Your Code Here
-  },
-  handleClickStart: function() {
-    // Your Code Here
-  },
-  handleClickStopReset: function(){
-    // Your Code Here
-  },
-  handleClickLap: function(){
-    // Your Code Here
-  }
-};
-
-window.onload = function(){
-  // Attach AppController methods to the DOM as event handlers here.
-};
+    },
+    handleClickStart: function() {
+      if (!Stopwatch.isRunning) { Stopwatch.start(); }
+    },
+    handleClickStopReset: function(){
+      if (Stopwatch.isRunning) {
+          Stopwatch.stop();
+          
+      }
+    },
+    handleClickLap: function(){
+      // Your Code Her
+    }
+  };
+  
+  window.onload = function(){
+    document.getElementById('start').onclick = AppController.handleClickStart;
+    document.getElementById('lap').onclick = AppController.handleClickLap;
+    document.getElementById('stop').onclick = AppController.handleClickStopReset;// Attach AppController methods to the DOM as event handlers here.
+  };
