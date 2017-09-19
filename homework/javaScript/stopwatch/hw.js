@@ -71,7 +71,7 @@ const Stopwatch = {
   const ViewHelpers = {
     zeroFill: function(number, length){
       let str = number.toString();
-      let numZeroes = Math.max(length - str.length, 0);
+      let cero = Math.max(length - str.length, 0);
       for( let i = 0; i < (length - str.length); i++){
           str = '0' + str;
       }
