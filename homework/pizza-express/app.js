@@ -1,6 +1,9 @@
-var express = require('express'); // Express Package
-var app = express();                // express module
-var port = 3005;
+const express = require('express'); // Express Package
+const app = express();                // express module
+const hbs = require('hbs');
+const port = 3005;
+app.set("view engine", "hbs");
+app.set('views', '/.views');
 
 app.listen(port, function() {
     console.log("==========================")
@@ -8,15 +11,17 @@ app.listen(port, function() {
     console.log("===========================")
 });
 app.get('/' , function(res, res) {
-    res.send('Welcom to Pizza Express!');
+    res.send('Welcome to Pizza Express!');
 });
-app.get('/topping/:type', function (req, res, next){
-    var topping = 'Pepperoni';
-    res.send(topping + ' Pizza! Good choice.!')
+app.get('/:type', function (req, res, next){
+    res.render('toppings.hbs',{
+        message: req.params.type + ("Pizza! Great Choice!!!!")
+    })
+    res.send(toppings + ' Pizza! Good choice.!')
 });
 app.get('/order/:amount/:size', function(req,res,next){
     var q = 10 // Q = quantity 
     var s = 'medium' // S = size 
-    res.send('Your order for ' + q  + s +' Pizza will be ready in 1 minute!')
+    res.render('Your order for ' + q  + s +' Pizza will be ready in 1 minute!')
 });
 app.listen(3000)
