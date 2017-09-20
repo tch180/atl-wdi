@@ -1,0 +1,9 @@
+var express = require('express'); // Express Package
+var app = express();                // express module
+var port = 3000;
+
+app.listen(port, function() {
+    console.log("==========================")
+    console.log('LISTENING ON PORT ' + port);
+    console.log("===========================")
+});
