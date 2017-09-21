@@ -3,6 +3,9 @@ var path        = require('path');
 var logger      = require('morgan');
 var express     = require('express');
 var hbs         = require('hbs');
+var bodyParser = require('body-parser');
+
+const todosController = require("./controllers/todos");
 /* app settings*/
 var app         = express();
 var port        = process.env.PORT || 3000;
@@ -10,6 +13,7 @@ var port        = process.env.PORT || 3000;
 
 // log
 app.use( logger('dev'));
+app.use('/todos', todosController);
 
 /*Views*/
 app.set('view engine', 'hbs');
@@ -19,22 +23,9 @@ app.get('/', function(req,res) {
   res.send('This is our Home Page');
 });
 
-/* INDEX TODOS */
-app.get('/todos', function(req,res) {
-  var seededTodos = [
-    {
-      description: "get beer",
-      urgent: true
-    }, {
-      description: "dry cleaning",
-      urgent: false
-    }
-  ];
-
-  res.render('todos/index', {
-    todos: seededTodos
-  });
-});
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 // Start server
 app.listen(port, function() {
