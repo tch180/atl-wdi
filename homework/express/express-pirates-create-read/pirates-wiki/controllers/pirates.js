@@ -12,9 +12,7 @@ router.get('/', function (req, res){
 });
 
 
-router.get('/new', function (req, res){
-    res.render("/pirates/new");
-});
+
 
 router.post('/', function (req, res){
     const newpirate = req.body;
@@ -23,6 +21,7 @@ router.post('/', function (req, res){
 
 
 });
+
 
 router.get('/:id', function (req, res){
     const id = req.params.id;
@@ -38,7 +37,9 @@ router.get('/:id', function (req, res){
     }
     });
    
-
+router.get('/new', function (req, res){
+    res.render("/pirates/new");
+});
 
 
 

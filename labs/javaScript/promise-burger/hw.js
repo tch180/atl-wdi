@@ -9,6 +9,9 @@ const kitchen = require('./kitchen');
 //CODE FOR QUESTION 1 HERE
 
 
+var ans = Promise.all(`.readMenu`)
+  console.log();
+
 // Order Some Food
 /* *************************************************************** */
 // 2. For this task, you will use the method `.order` to order a a burger from the menu.  
@@ -16,6 +19,9 @@ const kitchen = require('./kitchen');
 //  Console.log the data that comes back about this burger.
 
 // CODE FOR QUESTION 2 HERE
+
+
+/* var burgerOrder =  */
 
 
 // 3. Try and use the same method to order a `quesadilla`.  
@@ -73,4 +79,4 @@ const customers = [
   }
 ]
 
-// CODE FOR QUESTION 6 HERE
+// CODE FOR QUESTION 6 HERE}

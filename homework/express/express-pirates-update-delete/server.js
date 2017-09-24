@@ -1,11 +1,11 @@
 //===========================
 // REQUIREMENTS
 //===========================
-var express = require("express");
-var app = express();
-var logger = require("morgan");
-var bodyParser = require("body-parser");
-var hbs = require('hbs');
+const express = require("express");
+const app = express();
+const logger = require("morgan");
+const bodyParser = require("body-parser");
+const hbs = require('hbs');
 
 
 //===========================
@@ -25,13 +25,14 @@ app.set('views', './views');
 //===========================
 
 //controllers for `/pirates` resource
-var pirateController = require('./controllers/pirates.js');
+const pirateController = require('./controllers/pirates.js');
 app.use("/pirates", pirateController);
 
 
 //===========================
 // LISTENERS
 //===========================
-app.listen(3000, function(req, res){
-	console.log("listening");
+const port = process.env.PORT || 1337;
+app.listen(port, function () {
+    console.info(new Date(),'------SERVER UP----------------READY TO ROCK AND ROLL BOSS!!', port,  new Date());
 });
