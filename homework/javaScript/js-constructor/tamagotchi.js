@@ -12,14 +12,18 @@ class tamagotchi {
     cry(){
         this.foodinTummy--;
         console.log("WAAH!");
-        console.log(this.name + ' has food in tummy = ' + this.health);
+        console.log(this.name + ' has food in tummy = ' + this.foodinTummy);
     };
 }
 
 //create new Tamagotchis
-var tamagotchi1 = new tamagotchi();
-var tamagotchi2 = new tamagotchi();
+var tamagotchi1 = new tamagotchi('jade', 'creatureType')
+var tamagotchi2 = new tamagotchi('elias', 'cat');
 
+console.log(tamagotchi1);
+console.log(tamagotchi2);
 //test out your Tamagotchies below via console.logs
 tamagotchi1.cry();
 tamagotchi2.cry();
+
+
