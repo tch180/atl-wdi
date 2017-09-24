@@ -10,19 +10,40 @@ class tamagotchi {
         this.health = 10;
     }
     cry(){
-        this.foodinTummy--;
+        this.foodinTummy--
         console.log("WAAH!");
         console.log(this.name + ' has food in tummy = ' + this.foodinTummy);
     }
     puke(){
-        this.health --;
+        this.health --
         console.log("SICK AS A DOG")
         console.log(this.name + ' has current health = ' + this.health);
     }
     yawn(){
-        this.restedness--;
+        this.restedness--
         console.log("I AM SO TIRED")
         console.log(this.name + ' has current restedness of : ' + this.restedness);
+    }
+    start(){
+        console.log("LET'S GO" + this.name);
+        const me = this
+        this.hungerTimer = setInterval(function(){
+            me.cry();
+        }, 4000)
+        this.yawnTimer = setInterval(function(){
+            me.yawn();
+        },5000)
+        this.sickTimer = setInterval(function(){
+            me.puke();
+        }, 3500)
+    }
+
+
+stop () {
+    console.log("stop" + this.name);
+    clearInterval(this.hungerTimer);
+    clearInterval(this.yawnTimer);
+    clearInterval(this.sickTimer);
     }
 }
 
@@ -36,4 +57,8 @@ console.log(tamagotchi2);
 tamagotchi1.yawn();
 tamagotchi2.cry();
 
+tamagotchi1.start();
+tamagotchi2.start();
 
+/* tamagotchi1.stop();
+tamagotchi2.stop(); */
