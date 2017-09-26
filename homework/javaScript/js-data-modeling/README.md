@@ -30,7 +30,30 @@ entities/abstractions (e.g. Senior Paws app, above) that the app might use, and 
 This app provides easy access to all your e-mail service providers in one app. The app will let you select one of your email addresses and view your e-mails for that address.
 
 ```
-Write your answer here or in a separate js file.
+email {
+  id: string
+  pass: string
+  acctname:string
+  serviceName:string
+}
+
+user {
+  id: number
+  userName: string
+  password: string
+  
+}
+
+var Email1 = {
+  id: "youremail@email.com
+  pass: "youwish"
+  acctname: "main"
+  serviceName: "google"
+} user {
+  id: 432515
+  userName: "lolEPA"
+  password: "*******"
+}
 ```
 
 ### 2. Radio on the Internet app
@@ -39,7 +62,31 @@ This app hosts a ton of radio stations, each featuring their own playlists of so
 
 
 ```
-Write your answer here or in a separate js file.
+Radio {
+   - stationName
+   - Genre
+   - dj name
+   -station popularity
+}
+user {
+  - id
+  - pass
+  - playlistName
+}
+  
+
+var exampleStation = {
+  stationName: "Todays Hits"
+  Genre: "Mixed"
+  djName: "Mickey Riley"
+  stationPop: "1.5mil"
+} 
+user {
+  id: "Rickey Miley"
+  pass: "*******"
+  playListName:"road trip"
+}
+
 ```
 
 ### 3. Rock Concert App
@@ -47,19 +94,107 @@ Write your answer here or in a separate js file.
 This app will be a tool for managing all of your favorite bands' concerts; it will keep track of their tour dates, ticket purchasing, and next recommended show.
 
 ```
-Write your answer here or in a separate js file.
+concerts {
+  tourDate: string
+  tickets: string
+  next show: string
+} 
+user {
+name: string 
+pass: string 
+favBands: string
+}
+
+
+
+const ConcertApp = {
+  tourDates: [] string
+  tickets: "450"
+  nextShow: "nov 9th"
+} 
+user {
+  name: "inThisMoment21"
+  pass: "************"
+  favBands " in this moment"
+}
 ```
 
 ### 4. Coffee To-Go App
 
 This app will allow customers to browse a list of coffeeshops nearby, order drinks off of their menu, add those drinks to a shopping cart, and save that cart as a past order once the purchase is complete.
 
+`````
+CoffeeShop {
+  - menu
+  - pricing 
+  - loyalty program
+  - swag gear shopping
+}
+
+user {
+  - id
+  - password
+  - profile
+  - geotag 
+
+}
+coffeShop{
+  menu: string
+  pricing: number
+  loyaltyP: number
+}
+user {
+  id: string
+  pass: string
+  profile: number
+  geotag: number
+}
+
+
+Var order = {
+  menu: "grande black and white mocha"
+  pricing: " to dam expensive since im in WDI 12"  // JK $4.55
+  loyaltyP: 45
+}user{
+  id: "coffeguy21"
+  pass: "*******"
+  profile: 4773892
+  Geotag: 33.7740758,-84.36575490000001
+}
+
+
+
+
+
+`````
+
+
+
 ### 5. Team Tracker App
 
 This app shows you all the latest stats from your favorite sports teams. You can view individual player stats and full team stats.
 
+
 ```
-Write your answer here or in a separate js file.
+sportsTeam{
+  Sport: string
+  Teams: string
+  
+} player {
+  position: string
+  stats: number
+  teamStats: numbers
+}
+
+var SportsTeams1 = {
+  Sports: baseBall
+  teams: Mariners
+}
+player {
+  postion: pitcher
+  stats: 3	0	0	0	0	0	0
+  teamStats: 75/81
+}
 ```
 
 
@@ -68,7 +203,7 @@ Write your answer here or in a separate js file.
 Q. When you were creating relationships between the models, what were some thoughts or questions you had to help guide a connection between them?
 
 ```
-Write your answer here or in a separate js file.
+
 ```
 
 ### Reading and Videos for Tomorrow
