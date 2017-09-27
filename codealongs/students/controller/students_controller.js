@@ -7,21 +7,37 @@ const StudentModel = Schema.StudentModel;
 router.get('/', (request, response) => {
     StudentModel.find({})
         .then((students) => {
-            res.send('students/index', {
-                students : students
+            response.render('student/index', {
+                students: students
             })
         })
-    })
-    router.get('/:id', (request, response) => {
-        const studentId = request.params.id
-    
-        StudentModel.findById(studentId)
-            .then((student) => {
-                response.render('student/show',{
-                    student
-                })
+        .catch((error) => {
+            console.log(error)
+        })
+        
+});
+
+router.get('/:id', (request, response) => {
+    const studentId = request.params.id
+
+    StudentModel.findById(studentId)
+        .then((student) => {
+            response.render('student/show', {
+                student: student
             })
-    
-    })
+        })
+
+})
+
+router.get('/:id/delete', (request, response) => {
+
+    const studentId = request.params.id
+
+    StudentModel.findOneAndRemove(studentId)
+        .then((student) => {
+            response.send('You deleted it!')
+        })
+
+})
 
 module.exports = router

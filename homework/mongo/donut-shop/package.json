@@ -1,0 +1,11 @@
+{
+  "name": "donut-shop",
+  "version": "1.0.0",
+  "description": "![image](http://31.media.tumblr.com/6d5759ab02bb764c82e4577e3ba4af24/tumblr_nphj7tR2ZK1u3ihpao1_400.gif)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

@@ -1,5 +1,3 @@
-//schema.js
-
 const mongoose = require('mongoose');
 // Use ES6 native promises. We are specifying a Promise library to avoid a depreciation warning in the console.
 mongoose.Promise = global.Promise;
@@ -13,17 +11,16 @@ const ProjectSchema = new Schema({
 });
 
 const StudentSchema = new Schema({
-    name:  {
+    name: {
         type: String,
-        required: true,
-             },
+        required: true
+    },
     age: {
         type: Number,
-    required: true,
-},
-    Projects: 
-        [ProjectSchema]
-    },)
+        required: true
+    },
+    projects: [ProjectSchema]
+});
 
 const StudentModel = mongoose.model('Student', StudentSchema);
 const ProjectModel = mongoose.model('Project', ProjectSchema);

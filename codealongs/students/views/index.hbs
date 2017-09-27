@@ -1,8 +1,7 @@
-{{@each students}}
-<div>
-    <Sp>{{this.name}}</Sp>
-    <Sp>{{this.age}}</Sp>
-    <Sp></Sp>
-</div>
-
+{{#each student}}
+    <div>
+        <span>Student ID: {{this._id}}</span>
+        <strong>{{this.name}}</strong>
+        <span>{{this.age}}</span>
+    </div>
 {{/each}}
