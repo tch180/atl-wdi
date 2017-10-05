@@ -5,7 +5,7 @@
 var express = require("express");
 var router = express.Router();
 var mongoose = require("mongoose");
-
+const Donut = require('../models/donuts.js')
 
 
 router.get('/donuts', function(req, res) {
