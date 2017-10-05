@@ -6,6 +6,7 @@ const app = express();
 const logger = require("morgan");
 const bodyParser = require("body-parser");
 const hbs = require('hbs');
+const methodOverride = require('method-override') 
 
 
 //===========================
@@ -32,7 +33,7 @@ app.use("/pirates", pirateController);
 //===========================
 // LISTENERS
 //===========================
-const port = process.env.PORT || 1337;
+const port = process.env.PORT || 9000;
 app.listen(port, function () {
     console.info(new Date(),'------SERVER UP----------------READY TO ROCK AND ROLL BOSS!!', port,  new Date());
 });

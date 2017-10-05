@@ -1,11 +1,11 @@
 //======================
 // REQUIREMENTS
 //======================
-//require express, mongoose, Donut schema, user
+//require express, mongoose, recipe schema, user
 var express = require("express");
 var router = express.Router();
 var mongoose = require("mongoose");
-var Donut = require("../models/donuts.js");
+
 
 
 router.get('/donuts', function(req, res) {

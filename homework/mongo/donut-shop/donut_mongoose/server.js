@@ -53,5 +53,5 @@ mongoose.connect('mongodb://localhost/donut_store');
 
 const port = 3000;
 app.listen(port, () => {
-    console.log('----SERVER IS UP AND RUNNIN ON ${port}', new Date())
+    console.log('----SERVER IS UP AND RUNNIN ON' +  `${port} `+  ' new Date()')
 })
