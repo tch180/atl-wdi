@@ -2,9 +2,8 @@
 
 	<h2>You are viewing:
 
-		<<<<< DONUT NAME HERE >>>>
-		<h3>{{newDonuts.name}}</h3>
->
+		{{donuts.name}}
+
 	</h2>
 
 	<a href="/">Return to Home Page</a>
@@ -12,37 +11,39 @@
 	<div class="donut-container-show">
 		<h2 id="donut-name">
 
-				<<<< DONUT NAME HERE >>>>
-				<h3>{{newDonuts.name}}</h3>
+				{{donuts.name}}
+
 		</h2>
 
-				<<<< DONUT IMAGE HERE >>>>
-				<img src="{{donut.img}}" alt="">			
+				<img src="{{donuts.img}}" alt="">
+
 		<br>
 		<h3>Description:</h3>
 			<p>
 
-				<<<< DONUT DESCRIPTION HERE >>>>
+				{{donuts.description}}
 
 			</p><br>
 		<h3>Price:</h3>
 			<p id="cost">$
 
-				<<<< DONUT PRICE HERE >>>> each</p><br>
+				{{donuts.price}} each</p><br>
 
 			<h3 id="quantity">
 
-	 				<<<< DONUT QUANTITY >>>> remaining
+	 				{{donuts.qty}} remaining
 
 			</h3>
 
 			<br>
-
-			<<<< LINK TO THE DONUT's EDIT PAGE >>>>
-
+			<div>
+			<a href="/{{donuts._id}}/edit">Edit ME!!!</a>
+			</div>
 			<<<< BONUS: BUTTON THAT UPDATES THE COUNT >>>>
 
+			<form action="/{{donuts._id}}?_method=DELETE" method="POST">
+       			 <input type="submit" value="Delete">	
+				</form>
 		</div>
 
-		<<<< BUTTON THAT DELETED THE DONUT >>>>
 </main>

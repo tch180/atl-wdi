@@ -9,7 +9,7 @@ var bodyParser = require("body-parser");
 var methodOverride = require("method-override");
 var hbs = require("hbs");
 var logger = require('morgan');
-const db = mongoose.connection
+
 
 //======================
 // MIDDLEWARE
@@ -40,7 +40,10 @@ app.use('/', donutsController);
 // LISTENERS
 //======================
 //CONNECT MONGOOSE TO "donut_store"
-
+const db = mongoose.connection
+db.on('error', (err)=>{
+    console.log(err);
+})
 mongoose.connect('mongodb://localhost/donut_store');
   db.once('open', function() {
     console.log('MONGOOSE IS CONNECTED TO DONUT_STORE')
