@@ -8,7 +8,7 @@ class Navbar extends Component {
                 <a href="#menu">Menu</a>
                 <h1>Pizza-Express</h1>
                 <a href="#locations">Locations</a>
-                <a href="#contact">Contact</a>
+                <a href="#contacts">Contact</a>
             </div>
         )
 
