@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import Navbar from "./components/Navbar"
-import SplashImage from "./components/SplashImage"
-import Description from "./components/Description"
-import Contacts from "./components/Contact"
-import Location from "./components/Location"
-import MenuList from "./components/MenuList"
+import Navbar from './components/Navbar.jsx'
+import SplashImage from './components/Splashimage.jsx'
+import Description from './components/Description.jsx'
+import MenuList from './components/MenuList.jsx'
+import LocationList from './components/LocationList'
+import Contacts from './components/Contacts'
 
 class App extends Component {
   render() {
@@ -14,12 +14,11 @@ class App extends Component {
         <SplashImage />
         <Description />
         <MenuList />
+        <LocationList />
         <Contacts />
-        <Location/>
-        <h1>Place your components in here!</h1>
       </div>
     );
   }
 }
 
-export default App;
+export default App

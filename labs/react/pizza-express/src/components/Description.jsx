@@ -4,7 +4,7 @@ class Description extends Component {
     render() {
         return (
             <div className='Description'>
-                <img src={dImage} alt='Pizza Oven'/>
+                <img src='{dImage}' alt='Pizza Oven'/>
                 <p>"Deep v jean shorts tumeric lo-fi. 
                         Pabst salvia hammock, neutra before they sold out fingerstache 
                         paleo viral flannel mlkshk kombucha echo park crucifix gochujang
