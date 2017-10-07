@@ -5,9 +5,10 @@ class Contacts extends Component {
         return(
             <div className="contacts" id="contacts">
                 <h1>Store Hours</h1>
-                <p><strong>Sunday-Thursday</strong> 11:00am to 12:00am | <strong>Sunday-Thursday</strong> 11:00am -1:00am</p>
+                <p><strong>Sunday-Thursday</strong> 11:00am to 12:00am 
+                <strong>Sunday-Thursday</strong> 11:00am -1:00am</p>
                 <div>
-                    <p><strong>Phone:</strong> 404-555-1234</p>
+                    <p><strong>Phone:</strong> 404-555-1234</p><br/>
                     <p><strong>Email: </strong> pizzaheaven@yes.please</p>
                 </div>
 

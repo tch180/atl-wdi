@@ -1,16 +1,23 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import Location from './Location.jsx'
+import locationData from '../locationData.js'
 
 class LocationList extends Component {
     render(){
+        const location = locationData.map((location, index) => {
+            return <Location
+            name={location.name}
+            address={location.address}
+            phone={location.phone}
+             />
+        })
         return (
-            <div className="navbar">
-            <a href="#description"> Our Story</a>
-            <a href="#menu">Menu</a>
-            <h1>PIZZA-EXPRESS</h1>
-            <a href="#locations">Locations</a>
-            <a href="contact">Contact</a>
+            <div id="locations">
+                <h1>Locations</h1>
+                <div className="locations">
+                    {location}
+                </div>
             </div>
-
         )
     }
 }
