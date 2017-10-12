@@ -1,5 +1,5 @@
 import React from 'react';
-//import search from 'Search'
+
 
 const Movie = (props) => {
   return (

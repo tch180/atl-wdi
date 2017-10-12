@@ -34,9 +34,10 @@ class Search extends Component {
         </div>
   
        <div className="search">
-          <form id="id-search-form" method="get">
+          <form id="id-search-form" onSubmit={this.props.searchById} method="get">
             <input onChange={this.handleIdChange} type="text" name="id" placeholder="Enter omdb movie ID" />
-            <input onSubmit={this.props.searchById} type="submit" value="Search by ID" />
+            
+            <input type="submit" value="Search by ID" />
           </form>
         </div>
   

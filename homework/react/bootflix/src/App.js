@@ -47,11 +47,11 @@ class App extends Component {
     event.preventDefault()
    
     const id = event.target.id.value
-    console.log('search by id ')
+    console.log(id)
      axios.get(`http://www.omdbapi.com/?apikey=d31f1a94&i=${id}`)
      .then((res) => {
               this.setState({
-                id: <res className="data id"></res>,
+                id: res.data.imdbID, 
          title: res.data.Title,
          year: res.data.Year,
          director: res.data.Director,
