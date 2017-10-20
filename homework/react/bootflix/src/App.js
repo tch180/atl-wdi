@@ -33,7 +33,8 @@ class App extends Component {
         director: res.data.Director,
         genre: res.data.Genre,
         plot: res.data.Plot,
-        Rated: res.data.Rated
+        Rated: res.data.Rated,
+        Poster: res.data.Poster
 
       })
   
@@ -57,7 +58,8 @@ class App extends Component {
          director: res.data.Director,
          genre: res.data.Genre,
          plot: res.data.PlotFull,
-         Rated: res.data.Rated
+         Rated: res.data.Rated,
+         Poster: res.data.Poster
        })
         }).catch((error) => {
              console.log(error)
@@ -73,7 +75,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Search searchByTitle={this.searchByTitle} searchById={this.searchById} />
-        <Movie title={this.state.title} year={this.state.year} director={this.state.director} genre={this.state.genre} plot={this.state.plot} Rated={this.state.Rated} id={this.state.imdbID} />
+        <Movie title={this.state.title} year={this.state.year} director={this.state.director} genre={this.state.genre} plot={this.state.plot} Rated={this.state.Rated} Poster={this.state.Poster} id={this.state.imdbID} />
       </div>
     );
   }

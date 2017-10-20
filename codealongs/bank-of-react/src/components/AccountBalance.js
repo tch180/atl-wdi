@@ -40,12 +40,13 @@ _getCredits =() => {
         const credits = res.data;
         console.log(res.data)
         this.setState({credits})
-    })
     
+    
+    })
 
-credits[];
-debits[];
+console.log('error')
 }
+
 componentWillMount() {
     this._getDebits();
     this._getCredits();

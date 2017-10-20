@@ -13,7 +13,7 @@ const Movie = (props) => {
          <em><strong>Plot</strong>{props.plot}</em><br/>
          <em><strong>Rated </strong>{props.Rated}</em>
         </p>
-     <em><strong>Movie Poster:</strong>{props.img}</em>
+     <em><strong>Movie Poster:</strong>{props.Poster}</em>
       </div>
     </section>
   );
