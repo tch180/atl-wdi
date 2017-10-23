@@ -27,49 +27,56 @@ Ready.... Set..... Go!!!
 1.   What method would turn "marc" into "cram"?
 
   ```
-  your answer here
+  string.gsub(a_string,substitute)  ///// try_convert(obj) → string or nil
+
+
   ```
 
 2.   What method could you use that returns a boolean to check if "pickle" includes the substring "ick"?
 
   ```
-  your answer here
+Interpolation	
+"A string and an #{expression}" //// match(pattern, pos) → matchdata or nil
+
   ```
 
 3.  What method would check to see if `249092` is an odd number?
 
   ```
-  your answer here
-  ```
+Inequality	object != other 
+ ```
 
 4.   What method would turn `"winter is coming"` into `["winter", "is", "coming"]`?
 
   ```
-  your answer here
+  Access	string[position]
   ```
 
 5.   What method could replace all vowels in `"banana"` and replace them with `!` so it returns `b!n!n!`?
 
   ```
-  your answer here
+Substitute	
+string.gsub(a_string,
+substitute)
   ```
 
 6.  Which method can check to see if `"vanilla"` is a key for `cupcake = {"chocolate" => 4, "strawberry" => 0, "vanilla" => 3}` ?
 
   ```
-  your answer here
-  ```
+	hash[key]   
+
+```
 
 7.   What method can I use on `weather` to find how many key/value pairs exist in `weather = {:snow => true, :rain => false, :sun => false}` so it returns `3`?
 
   ```
-  your answer here
+Assigning	hash[key] = value	.length
   ```
 
 8.  What method can you call on `tally` to flip the key/value pairs in `tally = {"x" => 100, "y" => 200}` into  a new hash `{100 => "x", 200 => "y"}`?
 
   ```
-  your answer here
+shuffle .sample 
   ```
 
 9.   What method can you call to shuffle `[2, 4, 6]` into `[4, 2, 6]`?
@@ -93,7 +100,7 @@ Ready.... Set..... Go!!!
 12.   What method can turn `{"small" => 3, "medium" => 5, "large" => 12}` into `[["small", 3], ["medium", 5], ["large", 12]]`?
 
   ```
-  your answer here
+to_a → ary
   ```
 
 13.   What method can randomly select 1 or more elements from an array?
@@ -110,17 +117,17 @@ Ready.... Set..... Go!!!
 15. Which method could you use to git rid of all whitespace in `"   bat  m   a   n   "`?
 
   ```
-  your answer here
+gsub
   ```
 
 16. What method can you call to get rid of all duplicate elements in `["Luke", "Yoda", "Yoda", "Boba", "Luke"]` so that it returns `["Luke", "Yoda", "Boba"]`?
 
   ```
-  your answer here
+unquie
   ```
 
 17. What method would let you add `"Posh"` in the beginning of our array `["Ginger", "Sporty", "Scary", "Baby"]` so that it becomes `["Posh", "Ginger", "Sporty", "Scary", "Baby"]`?
 
   ```
-  your answer here
+unshift / shift/ push/ pop 
   ```
