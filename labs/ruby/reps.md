@@ -13,6 +13,14 @@ Write a method `lengths` that accepts a single parameter as an argument, namely 
 ```ruby
 words = ["hello", "what", "is", "up", "dude"]
 lengths(words)  # => [5, 4, 2, 2, 4]
+
+words[1].length
+
+words.each { |words|.length}
+
+
+
+
 ```
 ---
 
