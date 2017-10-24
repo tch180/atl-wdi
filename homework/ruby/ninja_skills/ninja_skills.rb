@@ -27,4 +27,18 @@ puts "#{christine} and i love #{likes_to}"
 
 rope_dart = "damage"
 attack = 2 
-puts "#{rope_dart}  #{attack}" 
+puts "#{rope_dart}  #{attack}"
+## nothing besides for it just printing damage 2 
+
+## 5 
+puts "pick a number"
+pick = gets.chomp
+puts pick.to_i * 9
+
+puts "what is your favorite food"
+food = gets.chomp
+puts "where is it from"
+place = gets.chomp 
+puts "your favortie food is #{food} and it is from #{place}"
+
+
