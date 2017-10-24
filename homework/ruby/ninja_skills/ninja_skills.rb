@@ -41,4 +41,16 @@ puts "where is it from"
 place = gets.chomp 
 puts "your favortie food is #{food} and it is from #{place}"
 
+## 6
+my_first_array = []
+puts my_first_array = ["i", "am", "starting", "to", "see", "dobule", 1,1,2,3,5,8,13,21,34,55]
+puts my_first_array.last
+puts my_first_array.first
+puts my_first_array.insert(6, ", wait!!!! no its")
+puts my_first_array.insert(17, 89)
+puts my_first_array.push("fibonacci!!!!!!")
+puts my_first_array.push[12]
+
+## 7 
+
 
