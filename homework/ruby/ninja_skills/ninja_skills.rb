@@ -19,3 +19,12 @@
  puts t
  x = t 
  puts x 
+
+ ## 4
+ christine = "Hi, I'm Christine. I'be your assassin for the day. "
+ likes_to = " silently walking in the forest"
+puts "#{christine} and i love #{likes_to}"
+
+rope_dart = "damage"
+attack = 2 
+puts "#{rope_dart}  #{attack}" 
