@@ -23,19 +23,25 @@ Answer should be no more than a couple of sentences. Refer to the reading.
 1. According to Metz, what is Object-oriented design about?
 
 ```
-Your Answer Here
+can lower your cost and improve your applications 
 ```
 
 2. What does SOLID stand for?
 
 ```
-Your Answer Here
+Single-responsiblity principle
+open-closed 
+liskov sub
+interface seg
+dependecy inversio 
 ```
 
 3. Ruby is a class-based object-oriented language. What does that mean?
 
 ```
-Your Answer Here
+it means that each piece of the program is a smaller object, to help with scalablity to not break the program if a change needed to be made. 
+
+
 ```
 
 4. Where are methods defined in Ruby?
@@ -47,19 +53,21 @@ Your Answer Here
 5. Why does single Responsibility matter?
 
 ```
-Your Answer Here
+because the less a thing has to do the better, 
 ```
 
 6. What does `attr_reader` do?
 
 ```
-Your Answer Here
+it is an accessor 
 ```
 
 7. What are 4 benefits Metz outlines for methods that have a single responsibility?
 
 ```
-Your Answer Here
+Maintainability,Testability, Less fragile, Easier Debugging
+
+,
 ```
 
 8. What are 4 things an object knows when it has a dependency?
