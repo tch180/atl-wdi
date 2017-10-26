@@ -1,5 +1,5 @@
 require 'ostruct'
-require 'Date'
+require 'date'
 
 # 1. Find the first user who signed up for our app:
 
@@ -17,8 +17,16 @@ users = [
         created_at: Date.new(2014,7,23)
     }
 ]
+# puts users.length
+# first_user = users.sort_by{|users| users[:created_at] }
+# puts first_user
 
-first_user = ???
+# first_user = users.sort { |person1, person2| person1[:created_at] <=> person2[:created_at]}
+# puts first_user
+
+first_user = users.min_by { |users| users[:created_at] }
+puts first_user[:username]
+
 
 # 2. Find the first customer's account balance
 
@@ -61,39 +69,46 @@ customers = [
     )
 ]
 
-first_customer_account_balance = ???
+first_customer_account_balance = customers.first do |customer|
+    credits = customer.credits.reduce(:+)
+    debits = customer.debits.reduce(:+)
+    credits - debits
+end
 
-# 3. Remove hair care products from the database
+puts first_customer_account_balance
 
-products = [
-    {
-        category: 'SPORTS'
-    },
-    {
-        category: 'MOVIES'
-    },
-    {
-        category: 'MOVIES'
-    },
-    {
-        category: 'HAIR_CARE'
-    },
-    {
-        category: 'MOVIES'
-    },
-    {
-        category: 'HAIR_CARE'
-    }
-]
 
-no_hair_care_products = ???
+# # 3. Remove hair care products from the database
 
-# 4. If any item in the array is a number, change it to a String
-# e.g. [1, 2, 'blah'] ===> ['1', '2', 'blah']
+# products = [
+#     {
+#         category: 'SPORTS'
+#     },
+#     {
+#         category: 'MOVIES'
+#     },
+#     {
+#         category: 'MOVIES'
+#     },
+#     {
+#         category: 'HAIR_CARE'
+#     },
+#     {
+#         category: 'MOVIES'
+#     },
+#     {
+#         category: 'HAIR_CARE'
+#     }
+# ]
 
-const things = [23, 43, 'strawberry', 'ruby', 234643234, 'another red thing', 1337]
+# no_hair_care_products = ???
 
-const string_things = ???
+# # 4. If any item in the array is a number, change it to a String
+# # e.g. [1, 2, 'blah'] ===> ['1', '2', 'blah']
+
+# const things = [23, 43, 'strawberry', 'ruby', 234643234, 'another red thing', 1337]
+
+# const string_things = ???
 
 # 5. Sort customers alphabetically by first and last name:
 
@@ -112,23 +127,23 @@ customers = [
     )
 ]
 
-sorted_customers = ???
+sorted_customers = customers.sort_by{ |customer1, customer2| [customer1.last_name, customer1.first_name] <=> [customer1.last_name, customer2.first_name]  }
+puts sorted_customers
+# # 6. Return all decorations with blue in their description
 
-# 6. Return all decorations with blue in their description
+# decorations = [
+#     {
+#         description: 'Blue birthday hat'
+#     },
+#     {
+#         description: 'red balloon'
+#     },
+#     {
+#         description: 'yellow candles'
+#     },
+#     {
+#         description: 'blue confetti'
+#     }
+# ]
 
-decorations = [
-    {
-        description: 'Blue birthday hat'
-    },
-    {
-        description: 'red balloon'
-    },
-    {
-        description: 'yellow candles'
-    },
-    {
-        description: 'blue confetti'
-    }
-]
-
-blue_decorations = ???
+# blue_decorations = ???
